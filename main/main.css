@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gui {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.854);
+  padding: 0.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 5;
+  cursor: default;
+  color: rgb(57, 172, 185);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background-color: rgba(232, 237, 255, 0.35);
+  font-weight: bold;
+}
+
+.btn {
+  font-size: 20px;
+  margin-left: 5rem;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(57, 172, 185);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.gui .clear-button {
+  cursor: pointer;
+}
+
+.upload-download {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.854);
+  padding: 2rem 1rem 1rem 1rem;
+  position: absolute;
+  right: 1px;
+  background-color: rgba(232, 237, 255, 0.35);
+}
+
+select {
+  padding: 2px;
+}

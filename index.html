@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main/main.css" />
+    <title>Canvas-painter</title>
+  </head>
+  <body onload="onInit()">
+    <main> 
+    <section class="upload-download">
+        <div class="inputs">
+            <input
+              type="file"
+              class="file-input btn"
+              name="image"
+              onchange="onImgInput(event)"
+            />
+            <a href="#" class="btn" onclick="downloadImg(this)" download="my-img.jpg"
+            >Download as jpeg</a>
+            <a href="#"  class="btn" onclick="downloadCanvas(this)" download="">Download as png</a>
+            <button class="btn" onclick="uploadImg()">
+              Upload Image from Canvas
+            </button>
+            <p class="user-msg"></p>
+            <div class="share-container"></div>
+      </section> 
+      <canvas class="main-canvas" width="2140" height="1050" style="cursor: crosshair" onclick="draw(event)"></canvas>
+      <section class="gui">
+            <input  type="color" name="color" value="" oninput="onGetUserPaintColor(this)" />
+            <input type="color" name="color" value="" oninput="onGetUserBackgroundColor(this)" />
+            <select onchange="setShape(this.value)">
+              <option value="triangle">Triangle</option>
+              <option value ="square">Square</option>
+              <option value ="circle">Circle</option>
+              <option value ="text">Text</option>
+            </select>
+            <input type="text" name="text" placeholder="Write ur text" oninput="onGetUserText(this)">
+            <clear onclick="clearCanvas()" class="clear-button">Clear</clear>
+          </section>
+
+    </main>
+    <script src="js/download-upload-service.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
